@@ -1,0 +1,42 @@
+#contact .hashLink {
+    text-decoration: none;
+}
+#contact .scrollArrow{
+    position: absolute;
+    left: 50%;
+    bottom: -5vh;
+    transform: translate(-50%);
+    margin: 60px auto;
+    width:6em;
+    height: 2.5rem;
+    /* border: 2px solid var(--secondary-accent); */
+    /* border-radius: 5px; */
+    background-image:url('../images/downArrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: invert(100%);
+    opacity: .5;
+    transition: all .7s ease-in-out;
+}
+#contact #slide1 .scrollArrow{
+    bottom: 0vh;
+}
+#contact input, #contact textarea {
+    text-align: left;
+    border: none;
+    padding: 2px 5px;
+    background-color: var(--third-bg-color);
+    color: #fff;
+    border-radius: 2px;
+    transition:all 0.5s ease;
+}
+#contact input::placeholder, #contact textarea::placeholder {
+    color: #fff;
+    text-align: center;
+}
+
+#contact input:focus, #contact textarea:focus {
+    color: #000 !important;
+    background-color: #fff
+}

@@ -1,0 +1,38 @@
+#contactForm h1{
+    font-size: 1.5em;
+}
+
+#contactForm p{
+    font-size: .8em;
+}
+#contactInfo input{
+    font-size: .8em;
+    padding:2px 0px;
+    margin: 0px 20px 10px 5px;
+    vertical-align: middle;
+    width: 80%;
+
+}
+#contactInfo textarea{
+    font-size: .8em;
+    padding:2px 0px;
+    margin: 0px 20px 10px 5px;
+    vertical-align: middle;
+    width: 80%;
+    height: 80px;
+}
+#contactInfo button{
+padding: 5px 10px;
+vertical-align: middle;
+}
+
+#contactFormExample .modal-container {
+    top: -20%;
+}
+
+.error-field {
+    margin: 0 0 10px 0;
+    height: .7em;
+    font-size: .7em;
+    color: red;
+}

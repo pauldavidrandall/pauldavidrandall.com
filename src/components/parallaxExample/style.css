@@ -1,0 +1,88 @@
+#ParallaxExample { 
+	height: 100%;
+	overflow: hidden;
+	z-index: inherit;
+ }
+ #ParallaxExample {
+ 	margin: 0;
+ 	padding: 0;
+ 	perspective: 1px;
+ 	transform-style: preserve-3d;
+ 	height: 100%;
+ 	overflow-y: scroll;
+ 	overflow-x: hidden;
+	background-color: black;
+ }
+ #ParallaxExample h1 {
+ 	font-family: 'sans-serif';
+ 	font-size: 1.5em;
+ 	color: #fff;
+ 	text-shadow: 2px 2px rgb(0, 0, 0, .7);
+ 	text-align: center;
+ }
+ #ParallaxExample p {
+ 	font-family: 'sans-serif';
+ 	font-size: .8em;
+ 	color: #fff;
+ 	text-align: center;
+ }
+ #ParallaxExample .peSlide {
+ 	box-sizing: border-box;
+ 	min-width: 100%;
+ 	min-height: 100%;
+ 	padding: 25% 10%;
+ 	position: relative;
+ 	transform-style: inherit;
+ }
+ #ParallaxExample .peSlide::before {
+ 	content: "";
+ 	position: absolute;
+ 	top: 0%;
+ 	right: 0;
+ 	bottom: 0%;
+ 	left:0;
+ 	min-height: 100%;
+ }
+ #ParallaxExample .peSlide, #ParallaxExample .peSlide::before {
+	 background: 50% 50% / cover;
+ }
+
+ #ParallaxExample #intro {
+	 background-image: url('image1.jpg');
+	 z-index: 302;
+
+ }
+ #ParallaxExample  #peslide1 {
+ 	background-image: url('image2.jpg');
+ }
+ #ParallaxExample #peslide2 {
+	background-color: black;
+	z-index: 302;
+
+ }
+ #ParallaxExample #peslide3 {
+ 	background-image: url('image3.jpg');
+		  
+
+ }
+#ParallaxExample #peslide4 {
+	background-color: black;
+	z-index: 302;
+
+
+ }
+#ParallaxExample #peslide5::before {
+ 	background-image: url('image4.jpg');
+
+ }
+#ParallaxExample #peslide6 {
+	 background-color: black;
+	 z-index: 302;
+
+ }
+
+#ParallaxExample #footer {
+	font-size: .6em;
+	font-weight: 100;
+	max-height:10%;
+ }
