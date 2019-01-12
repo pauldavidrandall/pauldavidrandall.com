@@ -1,0 +1,54 @@
+/* Main Colors */
+:root {
+    --warning: #d50000;
+    --caution: #fdd835;
+    --success: #64dd17;
+  }
+#confirmMessage {
+    display: none;
+    position: fixed;
+    /* height: 28vh; */
+    top: 30vh;
+    left: 30vw;
+    width:40vw;
+    border: 3px solid var(--secondary-accent);
+    background-color: var(--main-bg-color);
+    padding:0px;
+    font-size: 1em;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: all 1s ease-out;
+}
+#confirmTitle{
+    height: 5vh;
+    padding: 5px;
+    color: var(--primary-font-color);
+}
+#confirmBody{
+    padding: 25px;
+    font-size: .9em;
+    font-weight: 100;
+    word-wrap: break-word;
+}
+#confirmMessage button {
+    margin: 0px 10px 20px 10px;
+}
+
+.warning {
+    background: var(--warning);
+}
+
+#confirmMessage:hover {
+    box-shadow:1px 1px 30px var(--secondary-accent);
+}
+
+
+@media screen and (max-width: 900px){
+    #alertMessage{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width:99.5%;
+        padding:0px;
+    }
+}
