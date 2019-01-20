@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import './About.css';
 class About extends Component{
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
     render(){
         return(
-            <section  id="about" className="animated slideInLeft">
+            <section  id="about" className="container">
             <div id="slide1"className="slide">
             <h1 className="accent heading">About...</h1>
             <div className="imageContainer"><div className="profileImage"></div></div>

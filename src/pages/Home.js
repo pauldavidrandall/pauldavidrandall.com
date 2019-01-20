@@ -3,9 +3,12 @@ import { Link  } from "react-router-dom";
 
 
 class Home extends Component{
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
     render(){
         return(
-            <section id="art" className="animated slideInRight">
+            <section id="home" className="container">
                 <div id="slide1"className="slide">
                 <h1 className="accent heading">Hello...</h1>
                 <p>

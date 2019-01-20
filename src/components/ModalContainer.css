@@ -1,21 +1,21 @@
 /* Modal Container CSS */
 .modal-container{
-    /* display:none; */
-    width:50vw; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: fixed;
-    top: 13%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    top: 0;
+    right: 0;
+    width:100%; 
+    max-width: 800px;
     border: 3px solid var(--secondary-accent);
     border-radius: 5px;
-    /* background-image: linear-gradient(to bottom left, var(--secondary-bg-color), var(--third-bg-color)); */
     background-color: var(--main-bg-color);
-    padding:15px 20px 35px 20px;
-    font-size: 1em;
+    padding:1em 2em;
     color: var(--primary-font-color);
     z-index: 3;
-    /* box-shadow: 3px 3px 15px var(--third-bg-color); */
     transition: all 1s ease-out;
+
 }
 .modal-container:hover {
     border:3px solid var(--primary-accent);
@@ -23,13 +23,12 @@
 
 }
 .modal-title {
+    width: 100%;
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin: 0;
 }
 .modal-close {
-    font-size: 1.8em;
     float: right;
-    margin: -15px 0px 0 5px;
     font-weight: 500;
     cursor: pointer;
     
@@ -37,18 +36,10 @@
 .modal-close:hover{
     color: var(--primary-accent);
 }
-
-@media screen and (max-width: 900px){
+@media screen and (max-width: 800px){
     .modal-container{
-        position: fixed;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width:99.5vw;
-        border: 1px solid black;
-        border-radius: 5px;
-        background: white;
-        padding:20px;
-        font-size: 1em;
+        top: 0;
+        left: 0;
+        width:100%;
     }
 }

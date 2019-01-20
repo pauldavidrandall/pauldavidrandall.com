@@ -6,16 +6,15 @@ import About from '../pages/About';
 import Web from '../pages/Web';
 import Photo from '../pages/Photo';
 import Contact from '../pages/Contact';
-import AlertMessage from '../components/AlertMessage'
-
-
-
+import AlertMessage from '../components/AlertMessage';
+import './Page.css';
+import './Colors.css';
+import Footer from './Footer';
 
 class Page extends Component{
-    year = new Date().getFullYear();
     render(){
         return(
-            <div>
+            <>
                 <header>
                 <Navbar />
                 </header>
@@ -27,10 +26,9 @@ class Page extends Component{
                 <Route exact path='/contact' component={Contact} />
                 <AlertMessage />
                 </main>
-                <footer className="main-footer"><p>Copyright Paul David Randall 2006-{this.year}</p></footer>
-            </div>
+                <Footer />
+            </>
         ); 
     }
 };
-
 export default Page;

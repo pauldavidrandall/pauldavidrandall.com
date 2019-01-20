@@ -26,6 +26,8 @@
     text-align: left;
     border: none;
     padding: 2px 5px;
+    margin: 0 0 .5em 0;
+    width: 100%;
     background-color: var(--third-bg-color);
     color: #fff;
     border-radius: 2px;
@@ -33,7 +35,8 @@
 }
 #contact input::placeholder, #contact textarea::placeholder {
     color: #fff;
-    text-align: center;
+    font-size: .9rem;
+    font-weight: 100;
 }
 
 #contact input:focus, #contact textarea:focus {

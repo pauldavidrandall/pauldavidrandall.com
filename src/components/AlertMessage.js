@@ -12,7 +12,14 @@ export const alertMessage = (message) =>{
                     setTimeout(function(){alertDiv.className="disapear"}, 1000);
                     setTimeout(function(){alertDiv.style.display='none'}, 2500);
                     setTimeout(function(){alertDiv.className="modal"}, 3000);
-
+                     if (message.body === "Your message has been received.") closeContactFormModal()
+} 
+//current work around for non-auto closing contact form
+const closeContactFormModal = () => {
+    if(document.getElementById('contactFormExample')) {
+        document.getElementById('contactFormExample').style.display='none';
+    }
+    document.getElementsByTagName('body')[0].className = "";
 }
 class AlertMessage extends Component {
     render(){
@@ -20,8 +27,8 @@ class AlertMessage extends Component {
             <div  id="alertMessage" className="modal">
                 {/* Modal Content */}
                 <div className="modal-content">
-                    <div id="alertTitle"className="alertTitle warning">Test Title</div>
-                    <p id="alertBody">This is a test message</p>
+                    <div id="alertTitle"className="alertTitle caution">Test Title</div>
+                    <p id="alertBody">This is a test message</p> 
                 </div>
             </div>
         );

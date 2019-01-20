@@ -3,30 +3,35 @@ import { alertMessage } from "./AlertMessage"
 import './EmailForm.css'
 
 class EmailForm extends Component {
+    validateEmail(email){
+            if (!email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
+                document.getElementById('emailCaptureError').innerHTML = 'Valid Email Required';
+                return false
+            }
+            else {
+                document.getElementById('emailCaptureError').innerHTML = ''
+                document.getElementById('capEmail').value=""
+                document.getElementById('emailCaptureError').innerHTML = ""
+                return true
+            }
+    }
     componentDidMount(){
         // Using eventlistener on 'join' btn to validate and submit email
         const btn = document.getElementById('joinEmailBtn')
         btn.addEventListener('click', (e) => {
             e.preventDefault()
             const email = document.getElementById('capEmail').value
-            if (email === "") {
-                document.getElementById('emailCaptureError').innerHTML = 'Valid Email Required';
-                return;
-            };
-            document.getElementById('capEmail').value="";
-            document.getElementById('emailCaptureError').innerHTML = "";
-
-            fetch('/emailList/addEmail', { 
-                method: 'POST',
-                headers: {'Content-Type':'application/json'},
-                body: JSON.stringify(
-                    {email: email,
-                    subscribed: true})
-            })
-            .then((res) => res.text())
-            .then(text => alertMessage(text))
-            .then(() => this.props.closeOnSuccess())
-            .catch((err)=>console.log(err))
+            if (this.validateEmail(email)){
+                fetch('/emailList/addEmail', { 
+                    method: 'POST',
+                    headers: {'Content-Type':'application/json'},
+                    body: JSON.stringify({email: email, subscribed: true})
+                })
+                .then((res) => res.text())
+                .then(text => alertMessage(text))
+                .then(() => this.props.closeOnSuccess())
+                .catch((err)=>console.log(err))
+            }
         })
     }
     

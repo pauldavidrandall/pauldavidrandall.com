@@ -1,76 +1,69 @@
-
-#web {
-    transition: all .5s;
-}
-#web .byebye{
-    opacity: 0;
-}
-#examples{
+/* web css */
+#web .inner-container{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-button {
-    word-spacing: 0.25em;
-   text-transform: uppercase;
-   border: none;
-   margin: 10px 0px;
-    line-height: 22px;
-    padding: 12px 13px 11px;
-    text-align: center;
-    display: inline-block;
-    border-radius: 5px;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    position: relative;
 }
 #web .hashLink {
     text-decoration: none;
+    position: absolute;
+    bottom: 10vh;
 }
 #web .scrollArrow{
-    position: absolute;
-    left: 50%;
-    bottom: -5vh;
-    transform: translate(-50%);
-    margin: 60px auto;
-    width:6em;
-    height: 2.5rem;
-    /* border: 2px solid var(--secondary-accent); */
-    /* border-radius: 5px; */
+    padding: 0 1em;
+    opacity: .5;
     background-image:url('../images/downArrow.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     filter: invert(100%);
-    opacity: .5;
-    transition: all .7s ease-in-out;
 }
-#web #slide1 .scrollArrow{
-    bottom: 0vh;
+/* Individual Modals */
+#emailCapture {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    max-width:420px;
+    height:25vh;
+    max-height: 200px;
 }
-#web .upArrow{
-    top: -5vh;
-    background-image:url('../images/upArrow.png');
+#viewEditEmailList {
+    position: absolute;
+    justify-content: flex-start;
+    height: 60vh;
+    top:-15vh;
+    left:0;
+    padding: 60px 10px 10px 30px;
 }
-#web  #pageUp{
-    top: 81.5vh;
-    background-image:url('../images/upArrow.png');
-}
-
-#web .scrollArrow:hover {
-    opacity: 1;
-    width:100%;
-    background-repeat: repeat-x;
-    background-color: var(--secondary-accent);
-    box-shadow: 1px 1px 50px var(--secondary-accent);
-
-}
-
-button {
-    transition: all .6s;
-}
-button:hover {
-    transform: scale(1.1);
-    color: var(--primary-font-color);
+#viewEditEmailList h1  {
+    width:95%;
+    margin: 0 0px 8px 0px;
 }
 
+
+#contactFormExample{
+    position: absolute;
+    top: -15vh;
+    left: 0vw;
+}
+.bucket-container{
+    margin-top:1em;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+#web .bucket {
+    width:200px;
+    height:250px;
+    flex-grow: 1;
+    border: 1px solid var(--primary-accent);
+}
 
 
 

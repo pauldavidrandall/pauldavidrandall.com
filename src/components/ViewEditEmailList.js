@@ -14,9 +14,20 @@ class ViewEditEmailList extends Component {
     toggleModal = () => {
         let value = this.state.hideModal === true ? false : true;
         this.setState({hideModal:value})
-        if(this.state.hideModal === true) this.getEmailList();
+        // if(this.state.hideModal === true) this.getEmailList();
     }
-    //Fetch the current email list and pass it to buildTable()4
+    handleEsc = (event) => {
+        if(event.key === "Escape") {
+            if (this.state.hideModal === false) this.toggleModal();
+        }
+      }
+    componentDidMount(){
+        document.addEventListener("keydown", this.handleEsc, false);
+    }
+    componentWillUnmount(){
+        document.removeEventListener("keydown", this.handleEsc, false);
+    }
+    //Fetch the current email list and if not empty pass it to buildTable()
     getEmailList = () => {
         fetch('/emailList/getList')
         .then((res) => res.json())
@@ -30,17 +41,19 @@ class ViewEditEmailList extends Component {
             } //if it isn't empty, build a table and show it
             else{
                 this.setState({data: data})
-                this.toggleModal();
+                // this.toggleModal();
             }
         })
         .catch((err)=>console.log(err))
-};
-    componentDidUpdate(){
+    };
+    openEmailList = () => {
+        this.getEmailList();
+        this.toggleModal();
     }
     render(){
         return(
-            <div id="viewEditEmailList">
-                <ModalContainer 
+            <>
+                <ModalContainer id={this.props.id}
                     hideModal={this.state.hideModal} 
                     title = "View / Edit My Mailing List"
                     body = { <EmailTable 
@@ -51,8 +64,8 @@ class ViewEditEmailList extends Component {
                             />}
                     toggleModal = {this.toggleModal} 
                 />
-                <button onClick={this.state.hideModal === true ? this.getEmailList : this.toggleModal}>View/Edit Email List</button>
-            </div>
+                <button onClick={this.state.hideModal === true ? this.openEmailList: this.toggleModal}>View/Edit Email List</button>
+            </>
         )
     }
 }

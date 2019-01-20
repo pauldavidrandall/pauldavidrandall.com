@@ -1,9 +1,4 @@
-/* Main Colors */
-:root {
-    --warning: #d50000;
-    --caution: #fdd835;
-    --success: #64dd17;
-  }
+/* confirm messages css */
 #confirmMessage {
     display: none;
     position: fixed;
@@ -15,40 +10,39 @@
     background-color: var(--main-bg-color);
     padding:0px;
     font-size: 1em;
-    border-radius: 5px;
+    border-radius: 0px;
     z-index: 1000;
     transition: all 1s ease-out;
 }
 #confirmTitle{
-    height: 5vh;
-    padding: 5px;
+    height: 10vh;
+    padding: 22px 15px;
     color: var(--primary-font-color);
+    font-weight: 800;
 }
 #confirmBody{
-    padding: 25px;
+    padding: 15px;
     font-size: .9em;
     font-weight: 100;
     word-wrap: break-word;
 }
 #confirmMessage button {
-    margin: 0px 10px 20px 10px;
+    margin: 0px 10px 20px 15px;
 }
-
 .warning {
     background: var(--warning);
 }
-
 #confirmMessage:hover {
     box-shadow:1px 1px 30px var(--secondary-accent);
 }
-
-
 @media screen and (max-width: 900px){
-    #alertMessage{
+    #confirmMessage{
         position: fixed;
-        top: 50%;
-        left: 50%;
-        width:99.5%;
+        top: 0;
+        left: 0;
+        width:100vw;
         padding:0px;
+        border: none;
+        border-bottom: 3px solid var(--secondary-accent)
     }
 }

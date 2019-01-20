@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './FullPageModal.css'
 
 class FullPageModal extends Component {
     render(){

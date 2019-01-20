@@ -1,0 +1,11 @@
+footer{
+  position: fixed;
+    top:100vh;
+    text-align: center;
+    width: 102vw;
+    margin-top:-30px;
+    height: 30px;
+    border-top: 1px solid var(--secondary-accent);
+    opacity: .8;
+    font: normal small-caps 100 .9em/.9em 'Montserrat', sans-serif;
+  }

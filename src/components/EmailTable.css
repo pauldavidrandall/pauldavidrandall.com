@@ -1,8 +1,36 @@
 #emailTable {
    width: 100%;
-   padding: 10px 30px 0 0;
+   text-align: left;
+}
+
+#emailTable thead tr th{
+    padding: 8px 0;
+}
+#emailTable td {
+    font-weight: 100;
+    margin: 8px 0 0 0;
+}
+#emailTable .removeEmail{
+    font-variant: small-caps;
 }
 #emailTable .removeEmail:hover {
     cursor: pointer;
-    color: var(--primary-accent);
+    color: var(--warning);
 }
+@media(max-width: 535px){
+    #viewEditEmailList {
+        /* width:100vw; */
+        padding: 0;
+    }
+    #emailTable , #emailTable thead, #emailTable td, #emailTable tr, #emailTable th { 
+        display: block; 
+        text-align: left; 
+    } 
+    #emailTable td { 
+        padding-left: 10px; 
+    }
+    #emailTable thead { 
+        display: none;
+    }
+  }
+  

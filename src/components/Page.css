@@ -1,0 +1,75 @@
+/* Main CSS for pauldavidrandall.com */
+/* Resets */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Layout */
+  /* main {
+    display: flex;
+  } */
+  .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 95vh;
+  }
+  .slide{
+    position: relative;
+    max-width: 800px;
+    height: 100vh;
+    padding: 80px 1em 0 1em;
+  }
+  footer{
+    position: absolute;
+    bottom:0;
+  }
+  /* Main Styles */
+  body {
+    font: normal 100 1.2rem/1.2rem 'Montserrat', sans-serif;
+    background-color: var(--main-bg-color);
+    padding-bottom: 30px;
+    overflow-x:hidden;
+
+  }
+  body.modal-open {
+    overflow: hidden;
+}
+  .accent {
+    color: var(--primary-accent);
+  }
+  main h1, main h2 {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1em;
+    font-weight: 600;
+  }
+  p {
+    color: var(--primary-font-color);
+    line-height: 1.5em;
+  }
+  p a {
+    color: var(--secondary-accent);
+    font-weight: 300;
+    text-decoration: none;
+  }
+  button {
+    background-color: var(--primary-accent);
+    color: var(--primary-font-color);
+    word-spacing: 0.25em;
+    text-transform: uppercase;
+    border: none;
+    margin: 10px 0px;
+    line-height: 22px;
+    padding: 12px 14px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all .6s;
+  }
+  button:hover {
+    transform: scale(1.1);
+    color: var(--primary-font-color);
+}
+
+  

@@ -11,17 +11,27 @@ class EmailCapture extends Component {
         let value = this.state.hideModal === true ? false : true;
         this.setState({hideModal:value})
     }
+    handleEsc = (event) => {
+        if(event.key === "Escape") {
+            if (this.state.hideModal === false) this.toggleModal();        }
+      }
+    componentDidMount(){
+        document.addEventListener("keydown", this.handleEsc, false);
+    }
+    componentWillUnmount(){
+        document.removeEventListener("keydown", this.handleEsc, false);
+    }
     render(){
         return(
-            <div id="emailCapture2">
-                <ModalContainer 
+            <>
+                <ModalContainer id={this.props.id}
                     hideModal={this.state.hideModal} 
                     title = "Join My Mailing List"
                     body = {<EmailForm closeOnSuccess={this.toggleModal}/>}
                     toggleModal = {this.toggleModal} 
                 />
                 <button onClick={this.toggleModal}>Email Capture Form</button>
-            </div>
+            </>
         )
     }
 }

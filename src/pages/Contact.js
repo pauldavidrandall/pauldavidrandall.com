@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import ContactForm from '../components/ContactForm';
 import "./Contact.css";
 
@@ -12,7 +11,7 @@ class Contact extends Component{
     }
     render(){
         return(
-            <section  id="contact" className="animated slideInLeft">
+            <section  id="contact" className="container">
                 <div id="slide1"className="slide">
                     <h1 className="accent heading">Contact...</h1>
                     <p>If you are interested in working with me on your current or future project, please to reach out to me.</p>

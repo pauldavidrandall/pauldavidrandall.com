@@ -1,33 +1,29 @@
-/* Main Colors */
-:root {
-    --warning: #d50000;
-    --caution: #fdd835;
-    --success: #64dd17;
-  }
+/* alert mesages css */
 #alertMessage {
     display: none;
     position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* width:25vw; */
-    border: 3px solid var(--secondary-accent);
-    border-radius: 5px;
-    /* background-image: linear-gradient(to bottom left, var(--secondary-bg-color), var(--third-bg-color)); */
+    top: 0;
+    left: 0;
+    width:100vw;
+    border-bottom: 3px solid var(--secondary-accent);
     background-color: var(--main-bg-color);
     padding:0px;
     font-size: 1em;
-    z-index: 10;
+    z-index: 1000;
     transition: all 2s ease-out;
-}
-#alertBody{
-    padding: 25px;
-    font-size: .8em;
-    word-wrap: break-word;
+    text-align: center;
 }
 #alertTitle{
-    padding: 15px;
+    height: 8vh;
+    padding: 17px 15px;
     color: var(--primary-font-color);
+    font-weight: 800;
+}
+#alertBody{
+    padding: 15px;
+    font-size: .9em;
+    font-weight: 100;
+    word-wrap: break-word;
 }
 .success {
     background: var(--success);
@@ -39,18 +35,11 @@
 .warning {
     background: var(--warning);
 }
-
 .disapear {
-    opacity:0;
+    opacity: 0;
 }
-
-
 @media screen and (max-width: 900px){
     #alertMessage{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        width:99.5%;
-        padding:0px;
+        text-align: left;
     }
 }
