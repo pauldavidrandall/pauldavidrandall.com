@@ -13,7 +13,7 @@
     width: 80%;
 }
 #contactInfo textarea{
-    font-size: .8em;
+    font-size: 1em;
     padding:2px 0px;
     margin: 0px 20px 10px 5px;
     vertical-align: middle;
@@ -32,14 +32,12 @@ vertical-align: middle;
 }
 @media screen and (max-width:489px){
     #contactInfo input{
-        font-size: .8em;
         padding:2px 0px;
         margin: 0px 0px 10px 0px;
         vertical-align: middle;
         width: 100%;
     }
     #contactInfo textarea{
-        font-size: .8em;
         padding:2px 0px;
         margin: 0px 0px 10px 0px;
         vertical-align: middle;

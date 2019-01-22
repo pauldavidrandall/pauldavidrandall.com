@@ -31,7 +31,7 @@ class EmailTable extends Component {
             td = tr.insertCell();
             td.id = id;
             td.className = "removeEmail";
-            td.appendChild(document.createTextNode("remove"))
+            td.appendChild(document.createTextNode("X remove"))
             }
             document.getElementById("emailTable").addEventListener('click', this.handleEmailList);
     }

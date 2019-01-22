@@ -5,7 +5,7 @@ class Footer extends Component{
     year = new Date().getFullYear();
     render(){
         return(
-            <footer><p>copyright paul david randall 2006-{this.year}</p></footer>
+            <footer><p>copyright paul david randall <span>2006-{this.year}</span></p></footer>
         )
     }
 }

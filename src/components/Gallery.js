@@ -33,6 +33,7 @@ class Gallery extends Component {
         images = [];
     }
     componentDidMount(){
+        //keydown to listen for escape and right/left arrows for large image control
         document.addEventListener('keydown', (e) => {
             if (this.state.showLargeImage){
             if(e.key === "Escape") {
@@ -70,14 +71,16 @@ class Gallery extends Component {
         const largeImage = document.getElementById("largeImage")
         // const imageCaption = document.getElementById("imageCaption")
         if (e.type === "click") {
+            //if a bucket or image control is clicked, set current image, and update large image display
             if (e.target.className === "bucket" || e.target.classname === "galleryControl") {
-                cImage = this.setImage(e)
+                cImage = this.setImage(e) //returns correct current image ID
                 let result = this.state.images.filter(obj => {
-                 return obj.id === cImage
+                 return obj.id === cImage //get the correct image path based on current image ID
                  })
                  largeImage.setAttribute("style", "background-image: url("+ result[0].path+ ");")
                 //  imageCaption.innerHTML = result[0].caption
              }
+             //if bucket or large image is clicked, toggle the large image display
              if (e.target.className === "bucket" || e.target.id === "largeImage"){
                 let value = this.state.showLargeImage === false ? true : false;
                 this.setState({showLargeImage:value})
@@ -119,10 +122,10 @@ class Gallery extends Component {
     //if a scrollPrev/Next was clicked, it passes the prev/next image id to toggle image, then passed to this function to be set as current image
     setImage = (e) => {
         let image, pImage, nImage;
-        if (e.type === "click"){
+        if (e.type === "click"){//this is if it was a thumbnail clicked
             image = e.target
         }
-        else{
+        else{//this is if it was a gallery control clicked
             image = document.getElementById(e)
         }
         pImage = image.previousSibling

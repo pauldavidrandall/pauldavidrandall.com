@@ -4,15 +4,13 @@
 #photo .inner-container{
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: center;
     min-height: 100vh;
     position: relative;
 }
 #photo .hashLink {
     text-decoration: none;
     position: absolute;
-    bottom: 10vh;
+    bottom: 80px;
     left:0;
 }
 #photo .scrollArrow{
@@ -23,4 +21,9 @@
     background-position: center;
     background-size: contain;
     filter: invert(100%);
+}
+@media screen and (max-width: 800px){
+    #photo #slide1 ~ .hashLink{
+        bottom: 120px;
+    }
 }

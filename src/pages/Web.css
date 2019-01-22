@@ -9,8 +9,10 @@
 #web .hashLink {
     text-decoration: none;
     position: absolute;
-    bottom: 10vh;
+    bottom: 80px;
+
 }
+
 #web .scrollArrow{
     padding: 0 1em;
     opacity: .5;
@@ -22,32 +24,30 @@
 }
 /* Individual Modals */
 #emailCapture {
-    position: absolute;
+    position: fixed;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    max-width:420px;
-    height:25vh;
+    max-width:360px;
     max-height: 200px;
 }
 #viewEditEmailList {
-    position: absolute;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     justify-content: flex-start;
-    height: 60vh;
-    top:-15vh;
-    left:0;
-    padding: 60px 10px 10px 30px;
+    padding: 60px 10px 60px 30px;
 }
 #viewEditEmailList h1  {
     width:95%;
     margin: 0 0px 8px 0px;
 }
-
-
 #contactFormExample{
-    position: absolute;
-    top: -15vh;
-    left: 0vw;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
 .bucket-container{
     margin-top:1em;
@@ -56,7 +56,6 @@
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 #web .bucket {
     width:200px;
@@ -64,6 +63,15 @@
     flex-grow: 1;
     border: 1px solid var(--primary-accent);
 }
-
-
+@media screen and (max-width: 800px){
+    #web #slide1 ~ .hashLink{
+        bottom: 120px;
+    }
+    .modal-title {
+        font-size: 1em;
+    }
+    .modal-body p {
+        font-size: .9em;
+    }
+}
 

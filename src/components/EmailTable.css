@@ -12,6 +12,7 @@
 }
 #emailTable .removeEmail{
     font-variant: small-caps;
+    color: var(--warning);
 }
 #emailTable .removeEmail:hover {
     cursor: pointer;

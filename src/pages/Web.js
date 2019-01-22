@@ -31,13 +31,13 @@ class Web extends Component{
                 <Link smooth to="/web#slide2" className="hashLink"><span className="scrollArrow"></span></Link>
             </div>
             <div className="inner-container">
-            <div id="slide2"className="slide">
-                <h2 className="accent">Email Capture</h2>
-                <p>Your email list is your biggest asset, and building that list is an important function of any website.
-                Allowing visitors an easy way to sign up for updates, reminders, or content should always be a focus of a professional website.
-                From simple sticky top bar, to slide in on scroll, or pop-up modal on exit, you should always offer visitors a way to give you their email. </p>
-                <EmailCapture id="emailCapture"/>
-            </div>
+                <div id="slide2"className="slide">
+                    <h2 className="accent">Email Capture</h2>
+                    <p>Your email list is your biggest asset, and building that list is an important function of any website.
+                    Allowing visitors an easy way to sign up for updates, reminders, or content should always be a focus of a professional website.
+                    From simple sticky top bar, to slide in on scroll, or pop-up modal on exit, you should always offer visitors a way to give you their email. </p>
+                    <EmailCapture id="emailCapture"/>
+                </div>
                 <Link smooth to="/web#slide3" className="hashLink"><span className="scrollArrow"></span></Link>
             </div>
             <div className="inner-container">
@@ -47,13 +47,13 @@ class Web extends Component{
                     an email, exporting the list to pdf, or even to manually delete emails, I can build it for you. </p>
                     <ViewEditEmailList id="viewEditEmailList"/> 
                 </div>
-                    <Link smooth to="/web#slide4" className="hashLink"><span className="scrollArrow"></span></Link>
+                <Link smooth to="/web#slide4" className="hashLink"><span className="scrollArrow"></span></Link>
             </div>
             <div className="inner-container">
-            <div id="slide4"className="slide">
-            <h2 className="accent">Contact Form</h2>
-                <p>Make it easy for your site visitors to contact you without having to leave your website. A contact form can also help reduce the amount of spam mail you receive.</p>
-                <ContactFormExample id="contactFormExample" formHeading="Please fill out this sample form:" />
+                <div id="slide4"className="slide">
+                    <h2 className="accent">Contact Form</h2>
+                    <p>Make it easy for your site visitors to contact you without having to leave your website. A contact form can also help reduce the amount of spam mail you receive.</p>
+                    <ContactFormExample id="contactFormExample" formHeading="Please fill out this sample form:" />
                 </div>
                 {/* <Link smooth to="/web#slide5" className="hashLink"><span className="scrollArrow"></span></Link> */}
             </div>
