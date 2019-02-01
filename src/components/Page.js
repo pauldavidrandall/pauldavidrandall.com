@@ -19,6 +19,7 @@ class Page extends Component{
                 <Navbar />
                 </header>
                 <main>
+                <div className="grid"></div>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/web' component={Web} />

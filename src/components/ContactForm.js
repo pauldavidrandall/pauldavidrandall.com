@@ -40,7 +40,7 @@ class ContactForm extends Component {
             form.elements[i].value="";
             }
             //send message to database
-            fetch('/contactForm/sendMessage', { 
+            fetch('https://api.pauldavidrandall.com/contactForm/sendMessage', { 
                 method: 'POST',
                 headers: {'Content-Type':'application/json'},
                 body: JSON.stringify(message)

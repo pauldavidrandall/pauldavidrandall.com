@@ -26,9 +26,11 @@ vertical-align: middle;
 }
 .error-field {
     margin: 0 0 10px 0;
-    height: .7em;
-    font-size: .7em;
-    color: red;
+    height: .8em;
+    font-size: .8em;
+    font-weight: 800;
+    font-variant-caps: all-small-caps;
+    color: var(--warning);
 }
 @media screen and (max-width:489px){
     #contactInfo input{

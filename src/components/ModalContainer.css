@@ -7,10 +7,10 @@
     top: 0;
     right: 0;
     width:100%; 
-    max-width: 800px;
-    border: 3px solid var(--secondary-accent);
+    max-width: 800px;  
     border-radius: 5px;
-    background-color: var(--main-bg-color);
+    border: 3px solid var(--secondary-accent);
+    background-color: var(--main-bg-color-solid);
     padding:1em 2em;
     color: var(--primary-font-color);
     z-index: 3;
@@ -18,7 +18,7 @@
 
 }
 .modal-container:hover {
-    border:3px solid var(--primary-accent);
+    border:3px solid var(--secondary-accent);
     box-shadow:1px 1px 30px var(--secondary-accent);
 
 }
@@ -38,6 +38,8 @@
 }
 @media screen and (max-width: 800px){
     .modal-container{
+        min-height: 50%;
+        border-radius: 0px;
         top: 0;
         left: 0;
         width:100%;

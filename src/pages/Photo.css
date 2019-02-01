@@ -7,23 +7,8 @@
     min-height: 100vh;
     position: relative;
 }
-#photo .hashLink {
-    text-decoration: none;
-    position: absolute;
-    bottom: 80px;
-    left:0;
-}
-#photo .scrollArrow{
-    padding: 0 1em;
-    opacity: .5;
-    background-image:url('../images/downArrow.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    filter: invert(100%);
-}
-@media screen and (max-width: 800px){
-    #photo #slide1 ~ .hashLink{
-        bottom: 120px;
-    }
+@media screen and (min-width: 800px){
+  #gallery {
+    margin: 100vh 0;
+  }
 }

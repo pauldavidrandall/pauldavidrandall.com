@@ -42,8 +42,13 @@ class EmailTable extends Component {
     //If delete is confirmed delete the email from db and refresh the email list view
     handleConfirm = (message) => { 
         document.getElementById('confirmMessage').style.display='none'
-        fetch('emailList/'+this.state.id+'/delete', { 
+        let header = new Headers({
+          'Access-Control-Allow-Origin':'https://www.pauldavidrandall.com'
+        });
+        fetch('https://api.pauldavidrandall.com/emailList/'+this.state.id+'/delete', { 
             method: 'delete',
+            mode: 'cors',
+            headers: {'Content-Type':'application/json', header},
             body: JSON.stringify(
                 {id: this.state.id,
                 email: this.state.email})

@@ -1,21 +1,17 @@
- #photo #gallery  {
+ #photo #gallery  p{
     text-align: center;
     font-variant: small-caps;
-    height: 90vh;
-    max-width:100vw !important;
-
 }
 #photo #bucket-container {
     display:flex;
-    justify-content: center;
-    max-width:80vw;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    overflow: scroll;
-
+    overflow:scroll;
+    /* margin-bottom: 80px; */
 }
 #photo .bucket{
-    width:125px;
-    height:125px;
+    width:100px;
+    height:100px;
     border: 1px solid var(--primary-accent);
     flex-grow: 1;
     flex-shrink: 0;
@@ -32,68 +28,114 @@
     height:80vh;
     background-color: white;
     border: 1px solid var(--primary-accent);
-    z-index: 10;
 }
 #gallery #largeImage{
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #000000;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     transition: all .5s ease-in-out;
+    z-index: 400;
 }
 .galleryControl{
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    opacity: .3;
+    opacity: 1;
     transition: all .3s ease-in;
-}
-.galleryControl p{
-    padding: 10px;
-    background-color: var(--primary-font-color);
+    z-index: 800;
 }
 .galleryControl:hover {
-    opacity: .5;
     cursor: pointer;
 }
 .galleryControl:first-of-type {
     position: absolute;
     left: 0;
+    background-image: linear-gradient(to bottom, var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color) );
+
 }
 .galleryControl:last-of-type {
     position: absolute;
     right: 0;
+    background-image: linear-gradient(to top, var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color) );
+
 }
-#largeImage p, .galleryControl p {
-    color: black;
+.galleryControl p {
+    color: var(--primary-font-color);
+    padding: 15px;
+}
+#largeImage  p {
+    height: 10vh;
+    position: absolute;
+    left: -1px;
+    padding: 10px;
+    border: 1px solid var(--primary-accent);
+    border-bottom: none;
+    width: 100.2%;
+    color: var(--primary-font-color);
+    font-weight: 400;
+    background-image: linear-gradient(to right, var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color) );
+    background-color: black;
+}
+#largeImage p:first-of-type {
+ top: -10vh;
+ border-bottom: none;
+}
+#largeImage p:last-of-type {
+    bottom:-10vh;
+    border-top: none;
+    background-image: linear-gradient(to left, var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color) );
+}
+.galleryControl p {
+    color: var(--inverse-font-color);
 }
 @media screen and (max-width: 800px){
-    #photo #gallery {
-        padding: 80px 0 40px 0;
-    }
-    #photo #bucket-container {
-        display:flex;
-        max-width:100vw;
-        flex-wrap: wrap;
-        height:auto;    
-    }
-    #photo #imageDisplay{
-        top:0;
-        left:0;
-        width:100vw;
-        height:100vh;
-        background-color: white;
-        border: none;
-        z-index: 10;
-    }
-    .galleryControl {
-        width:20%;
-        opacity: 0;
-    }
-    .galleryControl:hover {
-        opacity: 0;
-    }
+  #photo #gallery {
+    padding: 80px 0 40px 0;
+  }
+  #photo #bucket-container {
+    display:flex;
+    max-width:100vw;
+    flex-wrap: wrap;
+    height:auto;    
+  }
+  #photo .bucket{
+    width:11vh;
+    height:11vh;
 }
+  #photo #imageDisplay{
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color: white;
+    border: none;
+    z-index: 400;
+  }
+
+  .galleryControl {
+    width:20%;
+    opacity: 0;
+    z-index: 800;
+  }
+  .galleryControl:hover {
+      opacity: 0;
+  }
+  #largeImage p:first-of-type {
+    height:5vh;
+    padding: 5px;
+    top: 0vh;
+    border-bottom: none;
+  }
+  #largeImage p:last-of-type {
+      height: 5vh;
+      padding: 5px;
+      bottom:0vh;
+      border-top: none;
+      background-image: linear-gradient(to left, var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color) );
+  }
+}
+

@@ -6,9 +6,8 @@ footer{
     margin-top:-29px;
     height: 30px;
     border-top: 1px solid var(--secondary-accent);
-    background-color: var(--main-bg-color);
-    opacity: .8;
     font: normal small-caps 100 .9em/.9em 'Montserrat', sans-serif;
+    z-index: 300;
   }
   footer span{
     font-size: .8em;

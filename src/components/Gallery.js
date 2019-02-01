@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Gallery.css';
+import { HashLink as Link } from 'react-router-hash-link';
+
 //const temp images, this will be moved to component will mount and call the server
 let images =[];
 class Gallery extends Component {
@@ -86,6 +88,8 @@ class Gallery extends Component {
                 this.setState({showLargeImage:value})
                 let body = document.getElementsByTagName('body')[0]
                 value === true ? body.className = "modal-open" : body.className = ""
+                let scrollArrow = document.getElementsByClassName('hashLink')[1]
+                value === true ? scrollArrow.style.display = "none" : scrollArrow.style.display = "block"
              }
         }
         else {
@@ -154,11 +158,14 @@ class Gallery extends Component {
                             <div id="imageDisplay" style={style}> 
                             <div id="iGleft" className="galleryControl" onClick={this.scrollPrev}><p>{lBtn}</p></div>
                             <div id="largeImage">
+                                <p>click edge to scroll</p>
+                                <p>click center to close</p>
                                 {/* <div id="imageCaption"></div> */}
                             </div> 
                             <div id="iGright" className="galleryControl" onClick={this.scrollNext}><p>{rBtn}</p></div>
                             </div>
                         </div>
+                        <Link smooth to="/photo#slide1" className="hashLink"><span className="scrollArrow"></span></Link>
                     </div>
         )
     }

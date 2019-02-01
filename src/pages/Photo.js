@@ -5,11 +5,13 @@ import Gallery from '../components/Gallery';
 
 
 class Photo extends Component{
-    componentDidMount() {
-        window.scrollTo(0, 0);
-    }
+  componentDidMount(){
+    this.toTop();
+  }
+  toTop = () => {
+      window.scrollTo(0, 0);
+  }
     render(){
-        // window.scrollTo(0, 0);
         return(
             <section  id="photo" className="container">
                 <div className="inner-container">
@@ -21,13 +23,12 @@ class Photo extends Component{
                         </p>
                         <p>If your company is in need of business portraits or product photography to go on your website. 
                         I can include photographic services as part of your web development package.</p>
+                        <Link smooth to="/photo#gallery" className="hashLink"><span className="scrollArrow"></span></Link>
                     </div>
-                    <Link smooth to="/photo#gallery" className="hashLink"><span className="scrollArrow"></span></Link>
                 </div>
                 <Gallery />
             </section>
         );
     }
 }
-
 export default Photo;

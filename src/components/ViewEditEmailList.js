@@ -29,7 +29,14 @@ class ViewEditEmailList extends Component {
     }
     //Fetch the current email list and if not empty pass it to buildTable()
     getEmailList = () => {
-        fetch('/emailList/getList')
+      let header = new Headers({
+        'Access-Control-Allow-Origin':'https://www.pauldavidrandall.com'
+      });
+        fetch('https://api.pauldavidrandall.com/emailList/getList', {
+          method: 'GET',
+                    mode: 'cors',
+                    headers: {'Content-Type':'application/json', header}
+        })
         .then((res) => res.json())
         .then(data => {
             // Check to see if email list is empty

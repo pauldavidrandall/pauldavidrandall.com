@@ -1,5 +1,21 @@
 /* Main CSS Color Variables for pauldavidrandall.com */
 /* ************************************************* */
+/* Main Colors Outrun-Mode */
+:root {
+  --main-bg-color: rgba(0, 170, 255, 0.8);
+  --main-bg-color-solid: rgb(0,170,255);
+  --secondary-bg-color: #aa00ffe6;
+  --third-bg-color: rgba(255, 0, 170, .8);
+  --primary-accent: #FF00AA;
+  --secondary-accent: #90ecff;
+  /* --secondary-accent: #aaff00; */
+  --primary-font-color: #fff;
+  --inverse-font-color: #000;
+  --accent-font-color: #ffcc00;
+  --warning: #d50000;
+  --caution: #fdd835;
+  --success: #64dd17;
+}
 /* Main Colors Intense */
 /* :root {
   --main-bg-color: #6600ff;
@@ -12,7 +28,7 @@
   --accent-font-color: #ff6600;
 } */
 /* Main Colors Dark-Mode */
-:root {
+/* :root {
     --main-bg-color: #263238;
     --secondary-bg-color: #000a12;
     --third-bg-color: #4f5b62;
@@ -24,7 +40,7 @@
     --warning: #d50000;
     --caution: #fdd835;
     --success: #64dd17;
-  }
+  } */
   /* Main Colors Light-Mode */
   /* :root {
     --main-bg-color: #f5f5f5;

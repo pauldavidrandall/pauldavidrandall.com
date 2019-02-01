@@ -6,55 +6,73 @@
     box-sizing: border-box;
   }
   /* Layout */
-  .container {
+  .container{
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 95vh;
+      justify-content: center;
       width: 100vw;
   }
   .slide{
     position: relative;
     max-width: 800px;
-    height: 100vh;
-    padding: 80px 1em 0 1em;
+    min-height: 100vh;
+    padding: 60px 1em;
+  }
+  section {
+    min-height: 100vh;
   }
   /* Main Styles */
-  body {
-    font: normal 100 1.2rem/1.2rem 'Montserrat', sans-serif;
-    background-color: var(--main-bg-color);
+  .inner-container:nth-of-type(odd) .slide, .slide{
+    background-image: linear-gradient(to top right, var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color) );
+  }
+  .inner-container:nth-of-type(even) .slide, #gallery{
+  background-image: linear-gradient(to bottom right, var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color)  );
+  }
+  .main-nav, footer {
+    background-image: linear-gradient(to right, var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color) );
+    /* background-image: radial-gradient(ellipse at 100vw 150%, white, rgb(255, 255, 100), rgb(255, 145, 0), var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color) ); */
+    background-color:var(--main-bg-color);
+  } 
+ body {
+    min-height: 100vh;
+    font: normal 100 1.2rem/1.5rem 'Montserrat', sans-serif;
+    background-attachment: static; 
     padding-bottom: 30px;
     overflow-x:hidden;
   }
   section {
-    transition: all 1s ease-out;
+    overflow: hidden;
   }
   body.modal-open {
     overflow: hidden;
 }
   .accent {
     color: var(--primary-accent);
+    text-shadow: 0px 0px 40px var(--secondary-accent);
   }
   main h1, main h2 {
     font-family: 'Roboto', sans-serif;
     line-height: 1em;
     font-weight: 600;
+    margin-bottom: .25em;
   }
   p {
     color: var(--primary-font-color);
-    line-height: 1.5em;
+    font-weight: 400;
+
   }
-  p a {
+  p a, main ul li a {
     color: var(--secondary-accent);
-    font-weight: 300;
     text-decoration: none;
   }
   button {
     background-color: var(--primary-accent);
     color: var(--primary-font-color);
     word-spacing: 0.25em;
+    font-size: .7em;
     text-transform: uppercase;
+    font-weight: 400;
     border: none;
     margin: 10px 0px;
     line-height: 22px;
@@ -67,5 +85,63 @@
     transform: scale(1.1);
     color: var(--primary-font-color);
 }
+/* FULL SCREEN */
+/*             */
+@media screen and (min-width:801px){
+  body {
+    background-image: radial-gradient(ellipse at 55vw 1vh, white, rgb(255, 255, 100), rgb(255, 145, 0), var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color) );
+  }
+  .inner-container {
+    min-width: 800px;
+  }
+  .slide {
+    min-height: 0;
+    padding: 60px 2em 60px 2em;
+    box-shadow: 0px 0px 20px 1px var(--primary-accent);
+  }
 
+ /* 80s grid background */
+  body {
+    background-color: #313640;
+  }
+  .grid {
+    top: -400px;
+    bottom: -400px;
+    left: -400px;
+    right: -400px;
+    position: fixed;
+    background-color: rgba(49, 54, 64, .1);
+    background-image: linear-gradient(#FF0092 1px, transparent 2px), linear-gradient(90deg, #FF0092 1px, transparent 2px);
+    background-size: 3% 3%, 3% 3%;
+    background-position: 0 0, 0 0;
+    -webkit-transform: perspective(300px) rotateX(80deg);
+            transform: perspective(300px) rotateX(80deg);
+  }
+  .grid {
+    -webkit-animation: throughSpace 2s linear;
+            animation: throughSpace 2s linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes throughSpace {
+    0% {
+      -webkit-transform: perspective(300px) rotateX(80deg) translateY(0%);
+              transform: perspective(300px) rotateX(80deg) translateY(0%);
+    }
+    100% {
+      -webkit-transform: perspective(300px) rotateX(80deg) translateY(5.8%);
+              transform: perspective(300px) rotateX(80deg) translateY(5.8%);
+    }
+  }
+  @keyframes throughSpace {
+    0% {
+      -webkit-transform: perspective(300px) rotateX(80deg) translateY(0%);
+              transform: perspective(300px) rotateX(80deg) translateY(0%);
+    }
+    100% {
+      -webkit-transform: perspective(300px) rotateX(80deg) translateY(5.8%);
+              transform: perspective(300px) rotateX(80deg) translateY(5.8%);
+    }
+  }
+}
   

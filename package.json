@@ -10,11 +10,14 @@
     "react-scripts": "2.1.1",
     "react-transition-group": "^2.5.1"
   },
-  "proxy": "http://localhost:1234",
+  "proxy": "http://pdrapi-env.jkmswnevnh.us-east-2.elasticbeanstalk.com/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy" : "aws s3 sync build/ s3://pauldavidrandall.com",
+    "postdeploy": "aws cloudfront create-invalidation --distribution-id E16ZEBMOLXPM2H --paths '/*' && rm -rf build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

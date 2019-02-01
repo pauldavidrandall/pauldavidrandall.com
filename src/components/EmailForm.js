@@ -22,9 +22,13 @@ class EmailForm extends Component {
             e.preventDefault()
             const email = document.getElementById('capEmail').value
             if (this.validateEmail(email)){
-                fetch('/emailList/addEmail', { 
+                let header = new Headers({
+                  'Access-Control-Allow-Origin':'https://www.pauldavidrandall.com'
+                });
+                fetch('https://api.pauldavidrandall.com/emailList/addEmail', { 
                     method: 'POST',
-                    headers: {'Content-Type':'application/json'},
+                    mode: 'cors',
+                    headers: {'Content-Type':'application/json', header},
                     body: JSON.stringify({email: email, subscribed: true})
                 })
                 .then((res) => res.text())
