@@ -40,6 +40,9 @@
     background-attachment: static; 
     padding-bottom: 30px;
     overflow-x:hidden;
+    background-image: url(./../bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
   }
   section {
     overflow: hidden;
@@ -89,7 +92,8 @@
 /*             */
 @media screen and (min-width:801px){
   body {
-    background-image: radial-gradient(ellipse at 55vw 1vh, white, rgb(255, 255, 100), rgb(255, 145, 0), var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color) );
+    /* background-image: radial-gradient(ellipse at 55vw 1vh, white, rgb(255, 255, 100), rgb(255, 145, 0), var(--secondary-bg-color),var(--main-bg-color), var(--third-bg-color) ); */
+    
   }
   .inner-container {
     min-width: 800px;
@@ -99,9 +103,10 @@
     padding: 60px 2em 60px 2em;
     box-shadow: 0px 0px 20px 1px var(--primary-accent);
   }
+}
 
  /* 80s grid background */
-  body {
+  /* body {
     background-color: #313640;
   }
   .grid {
@@ -143,5 +148,5 @@
               transform: perspective(300px) rotateX(80deg) translateY(5.8%);
     }
   }
-}
+} */
   

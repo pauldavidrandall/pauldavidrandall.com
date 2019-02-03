@@ -14,7 +14,7 @@ class Contact extends Component{
             <section  id="contact" className="container">
                 <div id="slide1"className="slide">
                     <h1 className="accent heading">Contact...</h1>
-                    <p>If you are interested in working with me on your current or future project, please to reach out to me.</p>
+                    <p>If you are interested in working with me on your current or future project, please reach out to me.</p>
                    <ContactForm />
                 </div>
                 
