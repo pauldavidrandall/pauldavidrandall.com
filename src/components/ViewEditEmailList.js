@@ -48,15 +48,11 @@ class ViewEditEmailList extends Component {
             } //if it isn't empty, build a table and show it
             else{
                 this.setState({data: data})
-                // this.toggleModal();
+                if(this.state.hideModal)this.toggleModal();
             }
         })
         .catch((err)=>console.log(err))
     };
-    openEmailList = () => {
-        this.getEmailList();
-        this.toggleModal();
-    }
     render(){
         return(
             <>
@@ -71,7 +67,7 @@ class ViewEditEmailList extends Component {
                             />}
                     toggleModal = {this.toggleModal} 
                 />
-                <button onClick={this.state.hideModal === true ? this.openEmailList: this.toggleModal}>View/Edit Email List</button>
+                <button onClick={this.state.hideModal === true ? this.getEmailList: this.toggleModal}>View/Edit Email List</button>
             </>
         )
     }

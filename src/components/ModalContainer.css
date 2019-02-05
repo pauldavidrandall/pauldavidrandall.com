@@ -29,7 +29,7 @@
 }
 .modal-close {
     float: right;
-    font-weight: 500;
+    font-weight: 800;
     cursor: pointer;
     
 }
@@ -38,7 +38,7 @@
 }
 @media screen and (max-width: 800px){
     .modal-container{
-        min-height: 50%;
+        min-height: 35%;
         border-radius: 0px;
         top: 0;
         left: 0;

@@ -21,9 +21,9 @@ class Photo extends Component{
                         I create mostly for myself these days but am always open to collaborative projects,
                         unique ideas, and helping others capture their vision. 
                         </p>
-                        <p>If your company is in need of business portraits or product photography to go on your website. 
+                        <p>If your company is in need of business portraits or product photography,  
                         I can include photographic services as part of your web development package.</p>
-                        <Link smooth to="/photo#gallery" className="hashLink"><span className="scrollArrow"></span></Link>
+                        <Link smooth to="/photo#gallery" className="hashLink">scroll<span className="scrollArrow"></span></Link>
                     </div>
                 </div>
                 <Gallery />

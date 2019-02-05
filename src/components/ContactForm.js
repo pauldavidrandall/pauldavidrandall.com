@@ -56,11 +56,14 @@ class ContactForm extends Component {
                 <p>{this.props.formHeading}</p>
                 <form id='contactInfo'>
                     <div id="nameError" className="error-field"></div>
-                    <input type='text' name='name' placeholder="Your name..."></input>
+                    <label for="name" className="screen-reader-text">Name:</label>
+                    <input type='text' name='name' id="name" placeholder="Your name..."></input>
                     <div id="emailError" className="error-field"></div>
-                    <input type='email' name='email' placeholder="Your email address..."></input>
+                    <label for="email" className="screen-reader-text">Email:</label>
+                    <input type='email' name='email' id="email" placeholder="Your email address..."></input>
                     <div id="messageError" className="error-field"></div>
-                    <textarea name='message' placeholder="Please enter your message..."></textarea>
+                    <label for="message" className="screen-reader-text">Message:</label>
+                    <textarea name='message' id="message" placeholder="Please enter your message..."></textarea>
                 </form>
                 <button id="sendMessageBtn" onClick={this.handleSubmit}>Send Message</button>
             </div>

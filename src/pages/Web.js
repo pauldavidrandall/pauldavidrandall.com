@@ -17,38 +17,38 @@ class Web extends Component{
             <section  id="web" className="container">
             <div className="inner-container">
                 <div id="slide1"className="slide">
-                    <h1 className="accent heading">Web...</h1>
-                    <p>This website was built using today's top technologies:</p>
-                    <ul>
-                      <li>
-                        <a href="https://reactjs.org/"rel="noopener noreferrer" target="_blank">React </a> for the front end
-                      </li>
-                      <li>
-                        <a href="https://nodejs.org/" rel="noopener noreferrer" target="_blank">Node </a> and 
-                        <a href="https://www.expressjs.com/" rel="noopener noreferrer" target="_blank"> Express </a> for the backend RESTful API.
-                      </li>
-                      <li>
-                      Hosted on 
-                      <a href="https://aws.amazon.com/" rel="noopener noreferrer" target="_blank"> AWS </a> using
-                        <ul>
-                          <li>
-                            <a href="https://aws.amazon.com/cloudfront" rel="noopener noreferrer" target="_blank">Cloudfront CDN </a> for quick global delivery of content
-                          </li>
-                          <li>
-                          <a href="https://aws.amazon.com/s3" rel="noopener noreferrer" target="_blank">S3 </a> for serving up the static assets 
-                          </li>
-                          <li>
-                            <a href="https://aws.amazon.com/elasticbeanstalk" rel="noopener noreferrer" target="_blank">Elastic Beanstalk </a> for deploying and auto-scaling 
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        All Connected to   
-                        <a href="https://www.mongodb.com/" rel="noopener noreferrer" target="_blank"> MongoDB </a> database-as-a-service  
-                        <a href="https://www.mlab.com/" rel="noopener noreferrer" target="_blank"> MLab. </a>
-                      </li>
-                    </ul>
-                    <Link smooth to="/web#slide2" className="hashLink"><span className="scrollArrow"></span></Link>    
+                  <h1 className="accent heading">Web...</h1>
+                  <p>This website was built using today's top technologies:</p>
+                  <ul>
+                    <li>
+                      <a href="https://reactjs.org/"rel="noopener noreferrer" target="_blank">React </a> for the front end
+                    </li>
+                    <li>
+                      <a href="https://nodejs.org/" rel="noopener noreferrer" target="_blank">Node </a> and 
+                      <a href="https://www.expressjs.com/" rel="noopener noreferrer" target="_blank"> Express </a> for the backend RESTful API
+                    </li>
+                    <li>
+                    All hosted on 
+                    <a href="https://aws.amazon.com/" rel="noopener noreferrer" target="_blank"> AWS </a> using:
+                      <ul>
+                        <li>
+                          <a href="https://aws.amazon.com/cloudfront" rel="noopener noreferrer" target="_blank">Cloudfront CDN </a> for quick global delivery
+                        </li>
+                        <li>
+                        <a href="https://aws.amazon.com/s3" rel="noopener noreferrer" target="_blank">S3 </a> for storing the static assets 
+                        </li>
+                        <li>
+                          <a href="https://aws.amazon.com/elasticbeanstalk" rel="noopener noreferrer" target="_blank">Elastic Beanstalk </a> for API deployment and auto-scaling 
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      All Connected to   
+                      <a href="https://www.mongodb.com/" rel="noopener noreferrer" target="_blank"> MongoDB </a> database-as-a-service  
+                      <a href="https://www.mlab.com/" rel="noopener noreferrer" target="_blank"> MLab. </a>
+                    </li>
+                  </ul>
+                  <Link smooth to="/web#slide2" className="hashLink">scroll<span className="scrollArrow"></span></Link>    
                 </div>
                
             </div>
@@ -57,17 +57,18 @@ class Web extends Component{
                   <h2 className="accent">Always excited to learn more!</h2>
                   <p>I am experienced with:</p>
                   <ul>
-                    <li>HTML5, ARIA, DOM</li>
-                    <li>CSS3, Box Model, Flexbox, Media Queries, Bootstrap</li>
-                    <li>Javascript, ES6, Fetch/AJAX, Local Storage</li>
-                    <li>Git, Bash, NPM, Yarn, SSH, AWS CLI</li>
+                    <li>HTML5 Semantic Markup</li>
+                    <li>CSS3, Flexbox, Media Queries, Bootstrap</li>
+                    <li>JavaScript, JS6, Fetch/AJAX, Local Storage</li>
                     <li>React, Next.js, Webpack, ESLint</li>
-                    <li>Node, Express, MongoDB, MySQL, PHP</li>
-                    <li>RESTful APIs, Authentication, JWT</li>
-                    <li>Linux, NGinx, AWS, DigitalOcean, DNS, SSL</li>
+                    <li>Node, Express, MongoDB, PHP, MySQL</li>
+                    <li>REST API, Authentication</li>
+                    <li>Git, Bash, NPM, Yarn, AWS CLI</li>
+                    <li>NGinx, AWS, DigitalOcean</li>
+                    <li>Linux, Mac OSX, Windows</li>
                   </ul>
-                  <p>Check out some sample functionality bellow...</p>
-                  <Link smooth to="/web#slide3" className="hashLink"><span className="scrollArrow"></span></Link>
+                  <p>Check out some sample functionality below...</p>
+                  <Link smooth to="/web#slide3" className="hashLink">scroll<span className="scrollArrow"></span></Link>
                 </div>
             </div>
             <div className="inner-container">
@@ -77,7 +78,7 @@ class Web extends Component{
                     Allowing visitors an easy way to sign up for updates, reminders, or content should always be a focus of a professional website.
                     From simple sticky top bar, to slide in on scroll, or pop-up modal on exit, you should always offer visitors a way to give you their email. </p>
                     <EmailCapture id="emailCapture"/>
-                    <Link smooth to="/web#slide4" className="hashLink"><span className="scrollArrow"></span></Link>
+                    <Link smooth to="/web#slide4" className="hashLink">scroll<span className="scrollArrow"></span></Link>
                 </div>
             </div>
             <div className="inner-container">
@@ -86,7 +87,7 @@ class Web extends Component{
                     <p>Quick and easy access to your mailing list is important. Whatever admin functionality you need, be it copy and pasting the entire list into
                     an email, exporting the list to pdf, or even to manually delete emails, I can build it for you. </p>
                     <ViewEditEmailList id="viewEditEmailList"/> 
-                    <Link smooth to="/web#slide5" className="hashLink"><span className="scrollArrow"></span></Link>
+                    <Link smooth to="/web#slide5" className="hashLink">scroll<span className="scrollArrow"></span></Link>
                 </div>
             </div>
             <div className="inner-container">
@@ -94,7 +95,7 @@ class Web extends Component{
                     <h2 className="accent">Contact Form</h2>
                     <p>Make it easy for your site visitors to contact you without having to leave your website. A contact form can also help reduce the amount of spam mail you receive.</p>
                     <ContactFormExample id="contactFormExample" formHeading="Please fill out this sample form:" />
-                    <Link smooth to="/web#slide1" className="hashLink"><span className="scrollArrow"></span></Link>
+                    <Link smooth to="/web#nav" className="hashLink">back to top<span className="scrollArrow"></span></Link>
                 </div>
             </div>
             {/* <div className="inner-container">

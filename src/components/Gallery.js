@@ -165,7 +165,7 @@ class Gallery extends Component {
                             <div id="iGright" className="galleryControl" onClick={this.scrollNext}><p>{rBtn}</p></div>
                             </div>
                         </div>
-                        <Link smooth to="/photo#slide1" className="hashLink"><span className="scrollArrow"></span></Link>
+                        <Link smooth to="/photo#nav" className="hashLink">back to top<span className="scrollArrow"></span></Link>
                     </div>
         )
     }

@@ -2,8 +2,8 @@
 /* ************************************************* */
 /* Main Colors Outrun-Mode */
 :root {
-  --main-bg-color: rgba(0, 170, 255, 0.8);
-  --main-bg-color-solid: rgb(0,170,255);
+  --main-bg-color: rgba(0, 170, 255, .9);
+  --main-bg-color-solid: rgb(0, 170, 255);
   --secondary-bg-color: #aa00ffe6;
   --third-bg-color: rgba(255, 0, 170, .8);
   --primary-accent: #FF00AA;
