@@ -90,7 +90,7 @@ body.modal-open {
 }
 .accent {
   color: var(--primary-accent);
-  text-shadow: 0px 0px 40px var(--secondary-accent);
+  text-shadow: 1px 1px 10px var(--primary-accent-shadow);
 }
 main h1, main h2 {
   font-family: 'Roboto', sans-serif;
@@ -121,6 +121,7 @@ button {
   line-height: 22px;
   padding: 12px 14px;
   text-align: center;
+  box-shadow: 1px 1px 10px var(--primary-accent-shadow);
   border-radius: 5px;
   transition: all .6s;
 }

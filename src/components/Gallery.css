@@ -23,7 +23,7 @@
 /* Full Screen Adjustments */
 @media screen and (max-width: 800px){
   #photo #gallery {
-    padding: 120px 2em 40px 2em;
+    padding: 140px .5em 0px .5em;
   }
   #photo #bucket-container {
     display:flex;
