@@ -40,12 +40,12 @@ class Web extends Component{
                         <li>
                           <a href="https://aws.amazon.com/elasticbeanstalk" rel="noopener noreferrer" target="_blank">Elastic Beanstalk </a> for API deployment and auto-scaling 
                         </li>
+                        <li>
+                          All Connected to   
+                          <a href="https://www.mongodb.com/" rel="noopener noreferrer" target="_blank"> MongoDB </a> database-as-a-service  
+                          <a href="https://www.mlab.com/" rel="noopener noreferrer" target="_blank"> MLab. </a>
+                        </li>
                       </ul>
-                    </li>
-                    <li>
-                      All Connected to   
-                      <a href="https://www.mongodb.com/" rel="noopener noreferrer" target="_blank"> MongoDB </a> database-as-a-service  
-                      <a href="https://www.mlab.com/" rel="noopener noreferrer" target="_blank"> MLab. </a>
                     </li>
                   </ul>
                   <Link smooth to="/web#slide2" className="hashLink">scroll<span className="scrollArrow"></span></Link>    
