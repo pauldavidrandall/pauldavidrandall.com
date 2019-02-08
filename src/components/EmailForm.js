@@ -43,6 +43,7 @@ class EmailForm extends Component {
         return(
             <form id="emailCaptureForm">
                 <div id="emailCaptureError" className="error-field"></div>
+                <label for="capEmail" className="screen-reader-text">Email:</label>
                 <input type='email' name='email' id="capEmail" placeholder="enter your email..."></input>
                 <button id="joinEmailBtn">Join</button>
             </form>
