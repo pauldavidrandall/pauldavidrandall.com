@@ -64,34 +64,47 @@ class Web extends Component{
                     <li>Node, Express, MongoDB, PHP, MySQL</li>
                     <li>REST API, Authentication</li>
                     <li>Git, Bash, NPM, Yarn, AWS CLI</li>
-                    <li>NGinx, AWS, DigitalOcean</li>
+                    <li>AWS, DigitalOcean, NGINX, Apache</li>
                     <li>Linux, Mac OSX, Windows</li>
                   </ul>
-                  <p>Check out some sample functionality below...</p>
                   <Link smooth to="/web#slide3" className="hashLink">scroll<span className="scrollArrow"></span></Link>
                 </div>
             </div>
             <div className="inner-container">
                 <div id="slide3"className="slide">
+                  <h2 className="accent">Not just a coder!</h2>
+                  <p>While adept with the technical programatic side of web developement I am also well versed in:</p>
+                  <ul>
+                   <li>graphic, content, and interface design principles</li>
+                   <li>user-centered design, layout styles and strategies</li>
+                   <li>competitive analysis, usability testing, and accessibility</li>
+                   <li>navigation design, organization, and labeling</li>
+                  </ul>
+                  <p>Check out some sample functionality below...</p>
+                  <Link smooth to="/web#slide4" className="hashLink">scroll<span className="scrollArrow"></span></Link>
+                </div>
+            </div>
+            <div className="inner-container">
+                <div id="slide4"className="slide">
                     <h2 className="accent">Email Capture</h2>
                     <p>Your email list is your biggest asset, and building that list is an important function of any website.
                     Allowing visitors an easy way to sign up for updates, reminders, or content should always be a focus of a professional website.
                     From simple sticky top bar, to slide in on scroll, or pop-up modal on exit, you should always offer visitors a way to give you their email. </p>
                     <EmailCapture id="emailCapture"/>
-                    <Link smooth to="/web#slide4" className="hashLink">scroll<span className="scrollArrow"></span></Link>
-                </div>
-            </div>
-            <div className="inner-container">
-                <div id="slide4"className="slide">
-                    <h2 className="accent">Admin Email List View</h2>
-                    <p>Quick and easy access to your mailing list is important. Whatever admin functionality you need, be it copy and pasting the entire list into
-                    an email, exporting the list to pdf, or even to manually delete emails, I can build it for you. </p>
-                    <ViewEditEmailList id="viewEditEmailList"/> 
                     <Link smooth to="/web#slide5" className="hashLink">scroll<span className="scrollArrow"></span></Link>
                 </div>
             </div>
             <div className="inner-container">
                 <div id="slide5"className="slide">
+                    <h2 className="accent">Admin Email List View</h2>
+                    <p>Quick and easy access to your mailing list is important. Whatever admin functionality you need, be it copy and pasting the entire list into
+                    an email, exporting the list to pdf, or even to manually delete emails, I can build it for you. </p>
+                    <ViewEditEmailList id="viewEditEmailList"/> 
+                    <Link smooth to="/web#slide6" className="hashLink">scroll<span className="scrollArrow"></span></Link>
+                </div>
+            </div>
+            <div className="inner-container">
+                <div id="slide6"className="slide">
                     <h2 className="accent">Contact Form</h2>
                     <p>Make it easy for your site visitors to contact you without having to leave your website. A contact form can also help reduce the amount of spam mail you receive.</p>
                     <ContactFormExample id="contactFormExample" formHeading="Please fill out this sample form:" />

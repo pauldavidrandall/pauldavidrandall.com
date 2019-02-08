@@ -33,7 +33,7 @@
     background-size: contain;
     filter: invert(100%);
 }
-#web #slide5 .scrollArrow, #photo #gallery .scrollArrow{
+#web #slide6 .scrollArrow, #photo #gallery .scrollArrow{
   background-image:url('../images/upArrow.png');
 }
 #web .slide ul {
@@ -53,6 +53,12 @@
   margin: .25em 0;
   color: var(--primary-font-color);
   font-variant-caps: all-small-caps;
+}
+#web .slide ul li ul{
+  margin: .25em .75em;
+}
+#web .slide ul li ul li::before{
+  color: var(--primary-accent-shadow);
 }
 /* Individual Modals */
 #emailCapture {
