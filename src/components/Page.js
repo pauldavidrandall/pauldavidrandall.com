@@ -12,24 +12,23 @@ import './Colors.css';
 import Footer from './Footer';
 
 class Page extends Component{
-    render(){
-        return(
-            <>
-                <header>
-                <Navbar />
-                </header>
-                <main>
-                <div className="grid"></div>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/about' component={About} />
-                <Route exact path='/web' component={Web} />
-                <Route exact path='/photo' component={Photo} />
-                <Route exact path='/contact' component={Contact} />
-                <AlertMessage />
-                </main>
-                <Footer />
-            </>
-        ); 
-    }
+  render(){
+    return(
+      <>
+        <header>
+        <Navbar />
+        </header>
+        <main>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/about' component={About} />
+        <Route exact path='/web' component={Web} />
+        <Route exact path='/photo' component={Photo} />
+        <Route exact path='/contact' component={Contact} />
+        <AlertMessage />
+        </main>
+        <Footer />
+      </>
+    ); 
+  }
 };
 export default Page;
