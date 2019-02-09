@@ -88,8 +88,8 @@ class Gallery extends Component {
         this.setState({showLargeImage:value})
         let body = document.getElementsByTagName('body')[0]
         value === true ? body.className = "modal-open" : body.className = ""
-        let scrollArrow = document.getElementsByClassName('hashLink')[1]
-        value === true ? scrollArrow.style.display = "none" : scrollArrow.style.display = "block"
+        // let scrollArrow = document.getElementsByClassName('hashLink')[1]
+        // value === true ? scrollArrow.style.display = "none" : scrollArrow.style.display = "block"
       }
     }
     else {
