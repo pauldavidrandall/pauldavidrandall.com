@@ -10,7 +10,6 @@
     "react-scripts": "2.1.1",
     "react-transition-group": "^2.5.1"
   },
-  "proxy": "http://pdrapi-env.jkmswnevnh.us-east-2.elasticbeanstalk.com/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
