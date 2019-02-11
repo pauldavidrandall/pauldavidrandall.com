@@ -48,6 +48,7 @@ class Web extends Component{
                 </ul>
               </li>
             </ul>
+            <p> Check out the code on <a href="https://github.com/pauldavidrandall/personalSite" rel="noopener noreferrer" target="_blank">GitHub</a></p>
             <Link smooth to="/web#slide2" className="hashLink">scroll<span className="scrollArrow"></span></Link>    
           </div>
         </div>
